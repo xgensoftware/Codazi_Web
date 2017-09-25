@@ -1,17 +1,62 @@
-﻿@{
+﻿@model Codazi.Models.ContactViewModel
+@{
     ViewBag.Title = "Contact";
+    Layout = "~/Views/Shared/_Layout.cshtml";
 }
-<h2>@ViewBag.Title.</h2>
-<h3>@ViewBag.Message</h3>
+<section class="business-talking">
+    <div class="container">
+        <h2>Let’s Talk Business.</h2>
+    </div>
+</section>
+@using (Html.BeginForm())
+{
+    @Html.ValidationSummary(true);
+    <div class="container">
+        <section class="main-section contact" id="contact">
 
-<address>
-    One Microsoft Way<br />
-    Redmond, WA 98052-6399<br />
-    <abbr title="Phone">P:</abbr>
-    425.555.0100
-</address>
-
-<address>
-    <strong>Support:</strong>   <a href="mailto:Support@example.com">Support@example.com</a><br />
-    <strong>Marketing:</strong> <a href="mailto:Marketing@example.com">Marketing@example.com</a>
-</address>
+            <div class="row">
+                <div class="col-lg-6 col-sm-7 wow fadeInLeft">
+                    @*<div class="contact-info-box address clearfix">
+                    <h3><i class=" icon-map-marker"></i>Address:</h3>
+                    <span>308 Negra Arroyo Lane<br>Albuquerque, New Mexico, 87111.</span>
+                </div>*@
+                    <div class="contact-info-box phone clearfix">
+                        <h3><i class="fa-phone"></i>Phone:
+                        </h3>
+                        <span>954-607-1547</span>
+                    </div>
+                    <div class="contact-info-box email clearfix">
+                        <h3><i class="fa-pencil"></i>email:
+                        </h3>
+                        <span>info@Codazi.com</span>
+                    </div>
+                    <div class="contact-info-box hours clearfix">
+                        <h3><i class="fa-clock-o"></i>Hours:
+                        </h3>
+                        <span><strong>Monday - Friday:</strong> 9am - 6pm EST</span>
+                    </div>
+                    @*<ul class="social-link">
+                    <li class="twitter"><a href="#"><i class="fa-twitter"></i></a></li>
+                    <li class="facebook"><a href="#"><i class="fa-facebook"></i></a></li>
+                    <li class="pinterest"><a href="#"><i class="fa-pinterest"></i></a></li>
+                    <li class="gplus"><a href="#"><i class="fa-google-plus"></i></a></li>
+                    <li class="dribbble"><a href="#"><i class="fa-dribbble"></i></a></li>
+                </ul>*@
+                </div>
+                <div class="col-lg-6 col-sm-5 wow fadeInUp delay-05s">
+                    <div class="form">
+                        @*<input class="input-text" type="text" name="" value="Your Name *" onfocus="if (this.value == this.defaultValue) this.value = '';" onblur="if (this.value == '') this.value = this.defaultValue;">
+                        <input class="input-text" type="text" name="" value="Your E-mail *" onfocus="if (this.value == this.defaultValue) this.value = '';" onblur="if (this.value == '') this.value = this.defaultValue;">
+                        <textarea class="input-text text-area" cols="0" rows="0" onfocus="if (this.value == this.defaultValue) this.value = '';" onblur="if (this.value == '') this.value = this.defaultValue;">Your Message *</textarea>
+                        <input class="input-btn" type="submit" value="send message">*@
+                        @Html.EditorFor(model => model.Name,new{htmlAttributes = new {@class="input-text",@placeholder="Your Name *"}})
+                        @Html.EditorFor(model => model.Email, new { htmlAttributes = new { @class = "input-text", @placeholder = "Your Email *" } })
+                        @Html.ValidationMessageFor(model => model.Email)
+                        @Html.TextAreaFor(model => model.Comment,new{@class="input-text text-area"})
+                        <button type="submit" class="input-btn">Submit</button>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </div>
+}

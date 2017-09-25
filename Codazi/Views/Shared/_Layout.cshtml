@@ -3,7 +3,7 @@
 <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, maximum-scale=1">
-
+    <meta name="keywords" content="Custom Software, mobile solutions, NetDocuments, software integration, MSOffice add-ins, software integration,software developer, NetDocuments Marketplace,legal, technology,law firm,AMLAW,DMS,Microsoft,tech,applications,development,attorney,CRM,CMS,case management system, Netdirector,consultants,Windows, Microsoft Office,healthcare,HIPPA"/>
     <title>Codazi.com</title>
     <link rel="icon" href="~/Images/codazi_logo.png" type="image/png">
     <link rel="shortcut icon" href="~/Images/codazi_logo_cPp_icon.ico" type="img/x-icon">
@@ -32,11 +32,11 @@
         <ul class="main-nav">
             <li class="@(ViewContext.RouteData.Values["Action"].ToString() == "Index" ? "current" : "")">@Html.ActionLink("Home","Index")</li>
             <li class="@(ViewContext.RouteData.Values["Action"].ToString() == "Services" ? "current" : "")">@Html.ActionLink("Services", "Services")</li>
-            <li><a href="#">Software</a></li>
+            @*<li><a href="#">Software</a></li>*@
             <li class="small-logo"><img src="~/Images/codazi_logo.png" alt=""></li>
-            <li><a href="#">Clients</a></li>
+            @*<li><a href="#">Clients</a></li>*@
             <li class="@(ViewContext.RouteData.Values["Action"].ToString() == "About" ? "current" : "")">@Html.ActionLink("About", "About")</li>
-            <li><a href="#">Contact</a></li>
+            <li class="@(ViewContext.RouteData.Values["Action"].ToString() == "Contact" ? "current" : "")">@Html.ActionLink("Contact", "Contact")</li>
         </ul>
         <a class="res-nav_click" href="#"><i class="fa-bars"></i></a>
     </div>
