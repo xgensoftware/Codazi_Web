@@ -30,13 +30,13 @@
 <nav class="main-nav-outer" id="test"><!--main-nav-start-->
     <div class="container">
         <ul class="main-nav">
-            <li class="@(ViewContext.RouteData.Values["Action"].ToString() == "Index" ? "current" : "")">@Html.ActionLink("Home","Index")</li>
-            <li class="@(ViewContext.RouteData.Values["Action"].ToString() == "Services" ? "current" : "")">@Html.ActionLink("Services", "Services")</li>
-            @*<li><a href="#">Software</a></li>*@
+            <li class="@(ViewContext.RouteData.Values["Action"].ToString() == "Index" ? "current" : "")"><a href="@Url.Action("Index","Home")">Home</a></li>
+            <li class="@(ViewContext.RouteData.Values["Action"].ToString() == "Services" ? "current" : "")"><a href="@Url.Action("Services","Home")">Services</a></li>
+            <li class="@(ViewContext.RouteData.Values["Action"].ToString() == "Software" ? "current" : "")"><a href="@Url.Action("Software","Home")">Software</a></li>
             <li class="small-logo"><img src="~/Images/codazi_logo.png" alt=""></li>
-            @*<li><a href="#">Clients</a></li>*@
-            <li class="@(ViewContext.RouteData.Values["Action"].ToString() == "About" ? "current" : "")">@Html.ActionLink("About", "About")</li>
-            <li class="@(ViewContext.RouteData.Values["Action"].ToString() == "Contact" ? "current" : "")">@Html.ActionLink("Contact", "Contact")</li>
+            <li class="@(ViewContext.RouteData.Values["Action"].ToString() == "About" ? "current" : "")"><a href="@Url.Action("About","Home")">About</a></li>
+            <li class="@(ViewContext.RouteData.Values["Action"].ToString() == "Contact" ? "current" : "")"><a href="@Url.Action("Contact","Home")">Contact</a></li>
+            <li class="@(ViewContext.RouteData.Values["Action"].ToString() == "Services" ? "current" : "")"><a href="#">Login</a></li>
         </ul>
         <a class="res-nav_click" href="#"><i class="fa-bars"></i></a>
     </div>

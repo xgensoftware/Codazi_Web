@@ -70,5 +70,11 @@ namespace Codazi.Controllers
 
             return View();
         }
+
+        [Route("Software")]
+        public ActionResult Software()
+        {
+            return View();
+        }
     }
 }

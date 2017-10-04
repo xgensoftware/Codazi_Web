@@ -89,3 +89,4 @@ D:\Development\Codazi_Web\Codazi\bin\Codazi.dll
 D:\Development\Codazi_Web\Codazi\bin\Codazi.pdb
 D:\Development\Codazi_Web\Codazi\obj\Debug\Codazi.csprojResolveAssemblyReference.cache
 D:\Development\Codazi_Web\Codazi\bin\com.Xgensoftware.Core.dll
+D:\Development\Codazi_Web\Codazi\bin\com.Xgensoftware.Core.dll.config

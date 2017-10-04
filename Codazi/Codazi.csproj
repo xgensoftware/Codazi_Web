@@ -146,6 +146,7 @@
     <Compile Include="App_Start\FilterConfig.cs" />
     <Compile Include="App_Start\RouteConfig.cs" />
     <Compile Include="Controllers\HomeController.cs" />
+    <Compile Include="Controllers\SoftwareController.cs" />
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
@@ -167,9 +168,9 @@
     <Content Include="Images\c-liogo3.png" />
     <Content Include="Images\c-liogo4.png" />
     <Content Include="Images\c-liogo5.png" />
-    <Content Include="Images\client-pic1.jpg" />
     <Content Include="Images\codazi_logo.png" />
     <Content Include="Images\codazi_logo_cPp_icon.ico" />
+    <Content Include="Images\DragDrop.png" />
     <Content Include="Images\footer-logo.png" />
     <Content Include="Images\glyphicons-halflings-white.png" />
     <Content Include="Images\glyphicons-halflings.png" />
@@ -178,21 +179,13 @@
     <Content Include="Images\iphone.png" />
     <Content Include="Images\list-style.png" />
     <Content Include="Images\macbook-pro.png" />
-    <Content Include="Images\Portfolio-pic1.jpg" />
-    <Content Include="Images\Portfolio-pic2.jpg" />
-    <Content Include="Images\Portfolio-pic3.jpg" />
-    <Content Include="Images\Portfolio-pic4.jpg" />
-    <Content Include="Images\Portfolio-pic5.jpg" />
-    <Content Include="Images\Portfolio-pic6.jpg" />
+    <Content Include="Images\NDDragDrop_ScreenShot.PNG" />
+    <Content Include="Images\NDDragDrop_ScreenShot1.PNG" />
     <Content Include="Images\pw_maze_black.png" />
     <Content Include="Images\pw_maze_black_2X.png" />
     <Content Include="Images\res_nav_click.png" />
     <Content Include="Images\section-bg1.jpg" />
     <Content Include="Images\section-bg2.jpg" />
-    <Content Include="Images\small-logo.png" />
-    <Content Include="Images\team-leader-pic1.jpg" />
-    <Content Include="Images\team-leader-pic2.jpg" />
-    <Content Include="Images\team-leader-pic3.jpg" />
     <Content Include="Images\wp.png" />
     <Content Include="Scripts\bootstrap.js" />
     <Content Include="Scripts\bootstrap.min.js" />
@@ -204,6 +197,7 @@
     <Content Include="fonts\fontawesome-webfont.woff" />
     <Content Include="fonts\FontAwesome.otf" />
     <None Include="Properties\PublishProfiles\FolderProfile.pubxml" />
+    <None Include="Properties\PublishProfiles\XgenVM1 - Web Deploy.pubxml" />
     <None Include="Scripts\jquery-1.10.2.intellisense.js" />
     <Content Include="Scripts\classie.js" />
     <Content Include="Scripts\jquery-1.10.2.js" />
@@ -236,6 +230,8 @@
     <Content Include="Views\Home\Index.cshtml" />
     <Content Include="Views\Home\Services.cshtml" />
     <Content Include="Views\Home\Success.cshtml" />
+    <Content Include="Views\Home\Software.cshtml" />
+    <Content Include="Views\Software\NDDragDrop.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
