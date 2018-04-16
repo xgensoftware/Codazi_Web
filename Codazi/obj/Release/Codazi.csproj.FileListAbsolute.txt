@@ -90,3 +90,4 @@ D:\Development\Codazi_Web\Codazi\obj\Release\Codazi.csproj.CoreCompileInputs.cac
 D:\Development\Codazi_Web\Codazi\obj\Release\Codazi.dll
 D:\Development\Codazi_Web\Codazi\obj\Release\Codazi.pdb
 D:\Development\Codazi_Web\Codazi\bin\com.Xgensoftware.Core.dll.config
+D:\Development\Codazi_Web\Codazi\bin\com.Xgensoftware.DAL.dll

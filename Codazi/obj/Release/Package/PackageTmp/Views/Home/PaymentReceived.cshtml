@@ -1,0 +1,43 @@
+﻿@model Codazi.Models.PurchaseViewModel
+@{
+    ViewBag.Title = "PaymentReceived";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+
+@using (Html.BeginForm("PaymentReceived","Home",FormMethod.Post,new{pvm = Model}))
+{
+    @Html.HiddenFor(model => model.FirstName)
+    @Html.HiddenFor(model => model.LastName)
+    @Html.HiddenFor(model => model.EmailAddress)
+    @Html.HiddenFor(model => model.PurchaseStatus)
+    @Html.HiddenFor(model => model.Quantity)
+    @Html.HiddenFor(model => model.TotalAmount)
+    @Html.HiddenFor(model => model.Phone)
+    @Html.HiddenFor(model => model.TransactionId)
+    @Html.HiddenFor(model => model.ReceiptID)
+    @Html.HiddenFor(model => model.RawTransaction)
+    @Html.HiddenFor(model => model.ItemNumber)
+
+    <section class="main-section team" id="about">
+        <div class="container">
+            <div class="team-leader-block clearfix">
+                <p>
+                    Thank you for your payment. Your transaction has been completed, and a receipt for your purchase has been emailed to you.
+                    You may log into your account at www.paypal.com to view details of this transaction.
+                </p>
+                <br/>
+                <h3>Transaction:</h3>
+                First Name: @Html.DisplayFor(model => model.FirstName) <br/>
+                Last Name: @Html.DisplayFor(model => model.LastName)<br/>
+                Email Address: @Html.DisplayFor(model => model.EmailAddress) <br/>
+                Company: @Html.EditorFor(model => model.CompanyName)<br/>
+                Status: @Html.DisplayFor(model => model.PurchaseStatus)<br />
+                Quantity: @Html.DisplayFor(model => model.Quantity)<br />
+                Total: @Html.DisplayFor(model => model.TotalAmount)<br />
+                <br/>
+                <button type="submit" class="input-btn">Generate License</button>
+            </div>
+        </div>
+    </section>
+}

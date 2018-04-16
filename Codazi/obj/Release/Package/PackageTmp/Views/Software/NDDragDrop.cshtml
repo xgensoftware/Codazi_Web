@@ -1,9 +1,22 @@
-﻿
+﻿@using System.Diagnostics
+
 @{
     ViewBag.Title = "NDDragDrop";
     Layout = "~/Views/Shared/_Layout.cshtml";
 }
-
+@*<script type="text/javascript">
+    $(function () {
+        $("#purchaseButton").click(function () {
+            $.ajax({
+                url: '@Url.Action("PurchaseSoftware", "Home", new{ productId = "dandND"})',
+                type: 'GET',
+                success: function (data) {
+                    $("#purchase").html(data);
+                }
+            });
+        });
+    });
+</script>*@
 
 <section class="main-section" id="service">
     <!--main-section-start-->
@@ -16,6 +29,7 @@
                     </div>*@
                     <div class="service-list-col2">
                         <h3>NetDocuments Drag & Drop</h3>
+                        <br/>
                         <p>Drag & Drop for Netdocuments is a addon tool that 
                             allows a user to select a folder within their NetDocuments 
                             environment. Then any document dragged and dropped on the sync screen
@@ -25,7 +39,7 @@
                         <p>This addon will enable users to work on a matter and have multiple sync
                             windows open so that they can add items to the corresponding NetDocuments 
                             folder quickly.  They will not need to run an upload program or have a browser window 
-                        open as the Drag & Drop application will have processed all the work.</p>
+                            open as the Drag & Drop application will have processed all the work.</p>
                     </div>
                 </div>
             </div>
@@ -37,7 +51,16 @@
         <div class="row">
             <div class="col-lg-4 col-sm-6 wow fadeInLeft delay-05s">
                 <div class="service-list">
-                   
+                    <form action="https://www.sandbox.paypal.com/cgi-bin/webscr" method="post" target="_top">
+                        <input type="hidden" name="cmd" value="_s-xclick">
+                        <input type="hidden" name="hosted_button_id" value="BRQV9H759QQJE">
+                        <input type="image" src="~/Images/agt-buy-button.jpg" style="height: 100px;width: 300px" border="0" name="submit" alt="PayPal - The safer, easier way to pay online!">
+                        <img alt="" border="0" src="https://www.sandbox.paypal.com/en_US/i/scr/pixel.gif" width="1" height="1">
+                    </form>
+                    @*@Html.ActionLink("Test Purchase",
+                        "PaymentReceived","Home",
+                        new {tx = "Paypal response: SUCCESS\nmc_gross=1.00\nprotection_eligibility =Ineligible\npayer_id =9B4ZDNV6CP9LG\ntax =0.00\npayment_date =12%3A01%3A30+Oct+10%2C+2017+PDT\npayment_status =Completed\ncharset =windows-1252\nfirst_name =Anthony\nmc_fee =0.33\ncustom =\npayer_status =unverified\nbusiness =asanfilippo28-facilitator%40yahoo.com\nquantity =1\npayer_email =asanfilippo%40xgensoftware.com\ncontact_phone =754-366-0697\ntxn_id =70U18618BX602084L\npayment_type =instant\nlast_name =Sanfilippo\nreceiver_email =asanfilippo28-facilitator%40yahoo.com\npayment_fee =0.33\nshipping_discount =0.00\ninsurance_amount =0.00\nreceiver_id =JX8GT974RTMWY\ntxn_type =web_accept\nitem_name =DragDrop+for+NetDocuments\ndiscount =0.00\nmc_currency =USD\nitem_number =dandND\nresidence_country =US\nreceipt_id =0237-4886-8452-7239\nhandling_amount =0.00\nshipping_method =Default\ntransaction_subject =\npayment_gross =1.00\nshipping =0.00\n"},
+                        null)*@
                 </div>
             </div>
             <figure class="col-lg-8 col-sm-6  text-right wow fadeInUp delay-02s">
@@ -46,3 +69,5 @@
         </div>
     </div>
 </section>
+<br/>
+<div class="container" id="purchase"></div>

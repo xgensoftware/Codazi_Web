@@ -1,0 +1,22 @@
+﻿@model Codazi.Models.PurchaseViewModel
+
+
+@using (Html.BeginForm())
+{
+    @Html.ValidationSummary(true);
+    <div class="form">
+        @*@Html.EditorFor(model => model.Name, new { htmlAttributes = new { @class = "input-text", @placeholder = "Your Name *" } })
+                        @Html.EditorFor(model => model.Email, new { htmlAttributes = new { @class = "input-text", @placeholder = "Your Email *" } })
+                        @Html.ValidationMessageFor(model => model.Email)
+                        @Html.TextAreaFor(model => model.Comment, new { @class = "input-text text-area" })*@
+                        
+        @Html.EditorFor(model => model.FirstName, new { htmlAttributes = new { @class = "input-text", @placeholder = "First Name *" } }) 
+        
+        <form action="https://www.sandbox.paypal.com/cgi-bin/webscr" method="post" target="_top">
+            <input type="hidden" name="cmd" value="_s-xclick">
+            <input type="hidden" name="hosted_button_id" value="BRQV9H759QQJE">
+            <input type="image" src="https://www.sandbox.paypal.com/en_US/i/btn/btn_paynowCC_LG.gif" border="0" name="submit" alt="PayPal - The safer, easier way to pay online!">
+            <img alt="" border="0" src="https://www.sandbox.paypal.com/en_US/i/scr/pixel.gif" width="1" height="1">
+        </form>
+    </div>
+}
